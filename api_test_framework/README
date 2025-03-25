@@ -18,7 +18,7 @@ Ensure you have the following installed on your system:
 
 # Installation
 Clone the repository and install dependencies:
-git clone https://github.com/yourusername/petstore-api-automation.git
+git clone https://github.com/Soniathorat/soniya-thorat.git
 cd petstore-api-automation
 mvn clean install
 
@@ -27,9 +27,7 @@ mvn clean install
 
 # Running Locally
 To execute tests on your local machine:
-
 mvn test
-
 
 # Running with Docker
 To run tests inside a Docker container:
@@ -52,16 +50,16 @@ To run tests inside a Docker container:
 # Tech Stack and Approach
 
 # Tools Used
-- REST Assured – API testing framework  
-- TestNG – Test execution framework  
-- Maven – Dependency and build management  
-- Docker – Containerized execution  
+- REST Assured â€“ API testing framework  
+- TestNG â€“ Test execution framework  
+- Maven â€“ Dependency and build management  
+- Docker â€“ Containerized execution  
 
 # Approach
-- Dependency Management – Used Maven to manage dependencies efficiently.  
-- Test Execution Order – Configured TestNG with 'dependsOnMethods' to ensure tests run in the correct sequence.  
-- Assertions & Validations – Implemented TestNG assertions to validate API responses dynamically.  
-- Dockerization – Enabled running tests inside a container to avoid local setup issues.  
+- Dependency Management â€“ Used Maven to manage dependencies efficiently.  
+- Test Execution Order â€“ Configured TestNG with 'dependsOnMethods' to ensure tests run in the correct sequence.  
+- Assertions & Validations â€“ Implemented TestNG assertions to validate API responses dynamically.  
+- Dockerization â€“ Enabled running tests inside a container to avoid local setup issues.  
 
 # Summary
 - Covers CRUD operations for the Pet Store API.  
