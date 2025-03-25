@@ -1,0 +1,83 @@
+# Monefy Mobile Test Automation
+
+# Overview  
+This project automates E2E test cases for the Monefy Android app using Appium.  
+The main functionalities tested:  
+- Adding an Expense  
+- Adding an Income  
+- Verifying the Balance  
+
+# Setup Instructions  
+
+# Prerequisites  
+- Install Java 17  
+- Install Maven  
+- Install Appium Server  
+- Install Android SDK & AVD Emulator (or use a real device)  
+- Install Docker (for containerized execution)  
+
+# Installation  
+Clone the repository and install dependencies:  
+
+git clone https://github.com/yourusername/monefy-automation.git
+cd monefy-automation/mobile-test-automation
+mvn clean install
+
+
+# Running the Tests  
+
+# Without Docker  
+1. Start the Appium server:  
+    appium
+   
+2. Run the tests:  
+    mvn test
+
+# With Docker  
+1. docker build -t appium-test .
+
+2. docker run --rm -it appium-test mvn test
+
+# Report Verification  
+- Check the target folder for detailed execution reports.  
+
+# Tech Stack and Approach  
+
+# Tools Used  
+| Technology  | Purpose |  
+|-------------|---------|  
+| Appium  | Mobile UI automation for Android & iOS. |  
+| JUnit 5 | Modern testing framework with annotations, assertions, and parameterized tests. |  
+| Maven   | Dependency management and test execution. |  
+| Java    | Strong community support, widely used in automation. |  
+| Docker  | Containerized execution for consistency. |  
+
+# Why This Approach?  
+- Scalability: Uses Page Object Model (POM) to structure test logic.  
+- Maintainability: Separates test logic from UI interactions.  
+- Stability: Uses explicit waits and dynamic validations instead of hardcoded values.  
+- Dockerization: Enables seamless test execution across different environments.  
+
+# Key Implementation Steps  
+1. Defined Critical User Flows  
+   - Adding an Expense  
+   - Adding an Income  
+   - Verifying the Balance  
+
+2. Structured Test Cases  
+   - Used dynamic test execution by fetching real-time balance values.  
+
+3. Implemented Wait Strategies  
+   - Prevents flaky tests by ensuring elements are interactable.  
+
+4. Reusable Methods  
+   - Avoids redundant code for transactions and validation.  
+
+5. Containerized Execution  
+   - Ensures consistent test runs without local dependency issues.  
+
+# Summary  
+- Follows best practices using POM, reusable methods, and parameterized tests.  
+- Scalable for future enhancements with minimal effort.  
+- Dockerized for stable, isolated, and reproducible test execution.  
+

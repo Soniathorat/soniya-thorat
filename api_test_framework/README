@@ -1,0 +1,72 @@
+# Pet Store API Test Automation
+
+# Overview
+This project automates API testing for the Pet Store API using REST Assured and TestNG.  
+It verifies core functionalities, including:  
+- Adding a new pet  
+- Fetching pet details  
+- Updating pet information  
+- Deleting a pet  
+
+# Setup Instructions
+
+# Prerequisites
+Ensure you have the following installed on your system:
+- Java 17  
+- Maven  
+- Docker 
+
+# Installation
+Clone the repository and install dependencies:
+git clone https://github.com/yourusername/petstore-api-automation.git
+cd petstore-api-automation
+mvn clean install
+
+
+# Running the Tests
+
+# Running Locally
+To execute tests on your local machine:
+
+mvn test
+
+
+# Running with Docker
+To run tests inside a Docker container:
+
+1. Build the Docker image:
+   docker build -t pettest-runner .
+
+
+2. Run the container:
+   docker run --rm pettest-runner
+
+# Report Verification
+- After execution, test reports can be found in the 'target' folder.  
+- Use this command to open the reports (Linux/macOS):
+  
+  open target/surefire-reports/index.html
+
+- On Windows, manually navigate to 'target/surefire-reports/'.
+
+# Tech Stack and Approach
+
+# Tools Used
+- REST Assured – API testing framework  
+- TestNG – Test execution framework  
+- Maven – Dependency and build management  
+- Docker – Containerized execution  
+
+# Approach
+- Dependency Management – Used Maven to manage dependencies efficiently.  
+- Test Execution Order – Configured TestNG with 'dependsOnMethods' to ensure tests run in the correct sequence.  
+- Assertions & Validations – Implemented TestNG assertions to validate API responses dynamically.  
+- Dockerization – Enabled running tests inside a container to avoid local setup issues.  
+
+# Summary
+- Covers CRUD operations for the Pet Store API.  
+- Uses REST Assured and TestNG for automation.  
+- Supports both local execution and Dockerized execution.  
+- Designed to be scalable, maintainable, and easy to use.  
+
+

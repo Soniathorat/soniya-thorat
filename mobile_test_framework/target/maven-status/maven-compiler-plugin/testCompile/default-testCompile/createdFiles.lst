@@ -1,0 +1,5 @@
+appiumtests\MonefyTest.class
+appiumtests\MonefyBalanceTest.class
+appiumtests\MonefyIncomeTest.class
+appiumtests\MonefyExpenseTest.class
+appiumtests\ConfigReader.class

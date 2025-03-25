@@ -1,0 +1,17 @@
+# Use an official OpenJDK image with Maven
+FROM maven:3.8.6-eclipse-temurin-17
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy only necessary files first to leverage Docker caching
+COPY pom.xml ./
+
+# Download dependencies (Maven will cache them)
+RUN mvn dependency:go-offline
+
+# Copy the rest of the project files
+COPY . .
+
+# Run Maven tests
+CMD ["mvn", "test"]
